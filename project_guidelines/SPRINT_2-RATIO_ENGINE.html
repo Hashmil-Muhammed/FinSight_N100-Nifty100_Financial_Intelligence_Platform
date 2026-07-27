@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 2 - Financial Ratio Engine Project Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f8fa;
+            color: #1e293b;
+            padding: 30px 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+        }
+        
+        /* Blue Hero Banner */
+        .hero-banner {
+            background-color: #1a5276;
+            border-radius: 24px;
+            padding: 30px 35px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1);
+        }
+        .hero-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .hero-icon {
+            font-size: 32px;
+            margin-right: 15px;
+        }
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .hero-title span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        .hero-meta-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hero-meta-item {
+            font-size: 13.5px;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+        .hero-meta-item span { margin-right: 6px; }
+        .hero-badge {
+            background-color: #facc15;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12.5px;
+            margin-left: auto;
+        }
+
+        /* Sprint Goal Section */
+        .goal-card {
+            border: 1px solid #bfdbfe;
+            border-left: 5px solid #2563eb;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+        }
+        .goal-header {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        .goal-header span { margin-right: 8px; }
+        .goal-text {
+            font-size: 14.5px;
+            color: #334155;
+            line-height: 1.6;
+        }
+        .text-bold { font-weight: 600; color: #0f172a; }
+
+        /* Split Columns Layout */
+        .split-layout {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        .left-col { flex: 1.1; }
+        .right-col { flex: 0.9; }
+
+        /* General Module Card Layout */
+        .module-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            height: 100%;
+        }
+        .module-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .module-title span { margin-right: 8px; color: #2563eb; }
+
+        /* Day Tasks Timeline items */
+        .day-item {
+            display: flex;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+        .day-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .day-badge-col { width: 75px; flex-shrink: 0; }
+        .day-badge {
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            border: 1px solid #dbeafe;
+        }
+        .day-content { flex-grow: 1; }
+        .day-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .day-desc {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .day-desc li {
+             margin-bottom: 6px;
+        }
+        
+        .code-style {
+            font-family: monospace;
+            background-color: #f1f5f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #334155;
+        }
+
+        /* Inline badges inside descriptions */
+        .inline-badge {
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-right: 4px;
+            display: inline-block;
+        }
+        .badge-critical { background-color: #fee2e2; color: #dc2626; }
+        .badge-warning { background-color: #fef9c3; color: #ca8a04; }
+        .badge-info { background-color: #e0f2fe; color: #0284c7; }
+
+        /* Deliverables List Item Layout */
+        .deliv-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .deliv-item:last-child { margin-bottom: 0; }
+        .deliv-icon {
+            font-size: 15px;
+            color: #2563eb;
+            width: 24px;
+            margin-top: 2px;
+        }
+        .deliv-details { flex-grow: 1; }
+        .deliv-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .deliv-desc {
+            font-size: 12.5px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* Done / Exit Criteria Card Box Layout */
+        .exit-card {
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #16a34a;
+            border-radius: 16px;
+            padding: 24px;
+            background-color: #f8fafc;
+            margin-top: 24px;
+        }
+        .exit-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #14532d;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .exit-title span { margin-right: 8px; color: #16a34a; }
+        .exit-inner-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .exit-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #334155;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .exit-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .exit-check-text {
+            display: flex;
+            align-items: center;
+        }
+        .exit-check-text::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        .exit-val {
+            font-family: monospace;
+            font-weight: 600;
+            color: #0f172a;
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Bottom Raw Meta Card details */
+        .summary-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+        .summary-row {
+            font-size: 13.5px;
+            color: #334155;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .summary-row:last-child { margin-bottom: 0; }
+        .summary-row span { margin-right: 10px; width: 20px; text-align: center; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Blue Hero Module -->
+    <div class="hero-banner">
+        <div class="hero-title-row">
+            <div class="hero-icon">🧮</div>
+            <h1 class="hero-title">SPRINT 2 <span>· Financial Ratio Engine</span></h1>
+        </div>
+        <div class="hero-meta-row">
+            <div class="hero-meta-item"><span>📅</span> Day 08 – 14</div>
+            <div class="hero-meta-item"><span>📋</span> 42 SP</div>
+            <div class="hero-meta-item"><span>🥞</span> Epic 02 · Financial Ratio Engine</div>
+            <div class="hero-badge">🏁 42 SP</div>
+        </div>
+    </div>
+
+    <!-- Sprint Goal Section Banner -->
+    <div class="goal-card">
+        <div class="goal-header">
+            <span>🎯</span> Sprint Goal
+        </div>
+        <p class="goal-text">
+            By end of Sprint 2, the Ratio Engine must compute 50+ KPIs for all 92 companies across all available years. The <span class="text-bold">financial_ratios</span> table in SQLite must be fully populated. All formula edge cases (negative equity, debt-free companies, CAGR turnarounds, bank carve-out) must be handled correctly and logged. All 20 KPI formula unit tests must pass.
+        </p>
+    </div>
+
+    <!-- Split Columns Layout: Daily Tasks vs Deliverables -->
+    <div class="split-layout">
+        
+        <!-- Left Column: Daily Tasks -->
+        <div class="left-col">
+            <div class="module-card">
+                <h3 class="module-title"><span>⏳</span> Daily tasks</h3>
+                
+                <!-- Day 08 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 08</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Profitability Ratios</h4>
+                        <ul class="day-desc">
+                            <li>Write <span class="code-style">src/analytics/ratios.py</span> — implement Net Profit Margin: <span class="code-style">net_profit / sales x 100</span> — return None if sales = 0</li>
+                            <li>Implement Operating Profit Margin — compute and cross-check against <span class="code-style">opm_percentage</span> field — log if difference > 1%</li>
+                            <li>Implement Return on Equity (ROE): <span class="code-style">net_profit / (equity_capital + reserves) x 100</span> — return None if equity+reserves <= 0</li>
+                            <li>Implement Return on Capital Employed (ROCE): <span class="code-style">EBIT / (equity + reserves + borrowings) x 100</span></li>
+                            <li>For companies in Financials broad_sector — use sector-relative ROCE benchmark instead of absolute threshold</li>
+                            <li>Implement Return on Assets (ROA): <span class="code-style">net_profit / total_assets x 100</span> — return None if total_assets = 0</li>
+                            <li>Write 8 unit tests covering: normal case, zero denominator (None), negative equity (None), OPM cross-check mismatch</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 09 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 09</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Leverage & Efficiency Ratios</h4>
+                        <ul class="day-desc">
+                            <li>Implement Debt-to-Equity: <span class="code-style">borrowings / (equity_capital + reserves)</span> — return 0 (not None) if borrowings = 0</li>
+                            <li>Add D/E flag: if D/E > 5 and company is NOT in Financials sector — add <span class="code-style">high_leverage_flag = True</span></li>
+                            <li>Implement Interest Coverage Ratio: <span class="code-style">(operating_profit + other_income) / interest</span> — return None if interest = 0</li>
+                            <li>For ICR = None (debt-free companies) — store display label Debt Free in a separate <span class="code-style">icr_label</span> column</li>
+                            <li>Add ICR warning flag: if ICR < 1.5 — company is at risk of not covering interest payments</li>
+                            <li>Implement Net Debt: <span class="code-style">borrowings - investments</span> (use investments as liquid asset proxy)</li>
+                            <li>Implement Asset Turnover: <span class="code-style">sales / total_assets</span> — return None if total_assets = 0</li>
+                            <li>Write 8 unit tests: D/E debt-free returns 0, ICR interest=0 returns None, ICR label = Debt Free, high D/E flag</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 10 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 10</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">CAGR Engine — All Growth Metrics</h4>
+                        <ul class="day-desc">
+                            <li>Write <span class="code-style">src/analytics/cagr.py</span> — implement CAGR formula: <span class="code-style">((end/start)^(1/n) - 1) x 100</span></li>
+                            <li>Compute Revenue CAGR for 3-year, 5-year, and 10-year windows</li>
+                            <li>Compute PAT (net profit) CAGR for 3-year, 5-year, and 10-year windows</li>
+                            <li>Compute EPS CAGR for 3-year, 5-year, and 10-year windows</li>
+                            <li>Handle all 6 CAGR edge cases — Positive+Positive: compute normally — Positive+Negative: return None with flag <span class="inline-badge badge-warning">DECLINE_TO_LOSS</span> — Negative+Positive: return None with flag <span class="inline-badge badge-info">TURNAROUND</span> — Negative+Negative: return None with flag <span class="inline-badge badge-critical">BOTH_NEGATIVE</span> — Zero base: return None with flag <span class="inline-badge badge-warning">ZERO_BASE</span> — Less than n years of data: return None with flag <span class="inline-badge badge-warning">INSUFFICIENT</span></li>
+                            <li>Store CAGR flag in a separate column alongside the CAGR value (e.g. <span class="code-style">revenue_cagr_5yr_flag</span>)</li>
+                            <li>Write 10 unit tests: normal CAGR, turnaround flag, decline-to-loss, both negative, zero base, insufficient data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 11 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 11</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Cash Flow KPIs & Capital Allocation</h4>
+                        <ul class="day-desc">
+                            <li>Implement Free Cash Flow: <span class="code-style">operating_activity + investing_activity</span> — negative value is allowed</li>
+                            <li>Implement CFO Quality Score: <span class="code-style">CFO / PAT</span> ratio averaged over 5 years — >1.0 = High Quality, 0.5-1.0 = Moderate, <0.5 = Accrual Risk — return None if PAT = 0</li>
+                            <li>Implement CapEx Intensity: <span class="code-style">abs(investing_activity) / sales x 100</span> — <3% = Asset Light, 3-8% = Moderate, >8% = Capital Intensive</li>
+                            <li>Implement FCF Conversion Rate: <span class="code-style">FCF / operating_profit x 100</span> — return None if operating_profit = 0</li>
+                            <li>Implement capital allocation 8-pattern classifier based on sign of (CFO, CFI, CFF)</li>
+                            <li>Pattern labels: (+,-,-) = Reinvestor, (+,-,-) with high CFO/PAT = Shareholder Returns, (+,+,-) = Liquidating Assets, (-,+,+) = Distress Signal, (-,-,+) = Growth Funded by Debt, (+,+,+) = Cash Accumulator, (-,-,-) = Pre-Revenue, (+,-,+) = Mixed</li>
+                            <li>Generate <span class="code-style">output/capital_allocation.csv</span> — columns: company_id, year, cfo_sign, cfi_sign, cff_sign, pattern_label</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 12 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 12</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Populate financial_ratios Table</h4>
+                        <ul class="day-desc">
+                            <li>Run the full ratio engine for all 92 companies across all available years</li>
+                            <li>Write all 14+ computed KPI columns into the <span class="code-style">financial_ratios</span> table in SQLite</li>
+                            <li>KPI columns required: net_profit_margin_pct, operating_profit_margin_pct, return_on_equity_pct, debt_to_equity, interest_coverage, asset_turnover, free_cash_flow_cr, capex_cr, earnings_per_share, book_value_per_share, dividend_payout_ratio_pct, total_debt_cr, cash_from_operations_cr, revenue_cagr_5yr, pat_cagr_5yr, eps_cagr_5yr, composite_quality_score</li>
+                            <li>Verify row count: <span class="code-style">SELECT COUNT(*) FROM financial_ratios</span> — must be >= 1,100 rows</li>
+                            <li>Manual spot-check: for 3 companies, recompute ROE and 5-year Revenue CAGR manually in a spreadsheet and compare to database values — difference must be less than 0.1%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 13 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 13</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Bank ROCE Carve-Out & Edge Case Log</h4>
+                        <ul class="day-desc">
+                            <li>For the 19 companies in the Financials broad_sector (banks, NBFCs, insurance) — standard D/E warning flag is suppressed because high leverage is structurally normal</li>
+                            <li>Cross-check computed ROCE against the pre-computed <span class="code-style">roce_percentage</span> column in companies.xlsx — log anomalies where difference > 5% to <span class="code-style">output/ratio_edge_cases.log</span></li>
+                            <li>Cross-check computed ROE against the pre-computed <span class="code-style">roe_percentage</span> column in companies.xlsx — note that some source values appear anomalous (e.g. TCS shows 0.52) — use ratio engine value for analytics, source value for display only</li>
+                            <li>Review <span class="code-style">ratio_edge_cases.log</span> and categorise each anomaly as: data source issue, version difference, or formula discrepancy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 14 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 14</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Tests & Sprint Review</h4>
+                        <ul class="day-desc">
+                            <li>Run all 20 KPI formula unit tests — must show 0 failures</li>
+                            <li>Review <span class="code-style">ratio_edge_cases.log</span> — confirm all anomalies are documented and understood</li>
+                            <li>Run screener preview: quick filter ROE > 15% and D/E < 1 — verify result count is between 15 and 50 companies and the list makes business sense</li>
+                            <li>Sprint 2 retrospective — document formula decisions and edge case resolutions for team knowledge base</li>
+                            <li>Demo <span class="code-style">financial_ratios</span> table to team lead — show 5 companies with all computed KPIs</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Column: Deliverables & Exit Criteria -->
+        <div class="right-col">
+            <div class="module-card">
+                <h3 class="module-title"><span>🧺</span> Deliverables</h3>
+                
+                <div class="deliv-item">
+                    <div class="deliv-icon">🗄️</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">financial_ratios table in SQLite</div>
+                        <div class="deliv-desc">— 1,100+ rows, 14+ KPI columns per company-year</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📄</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/capital_allocation.csv</div>
+                        <div class="deliv-desc">— 8-pattern label for every company-year</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📝</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/ratio_edge_cases.log</div>
+                        <div class="deliv-desc">— all anomalies documented with category</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">💻</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">src/analytics/ratios.py</div>
+                        <div class="deliv-desc">— profitability, leverage, efficiency ratio functions</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">💻</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">src/analytics/cagr.py</div>
+                        <div class="deliv-desc">— CAGR engine with all 6 edge case handlers</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">💻</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">src/analytics/cashflow_kpis.py</div>
+                        <div class="deliv-desc">— CFO quality, CapEx intensity, FCF conversion</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">🧪</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">tests/kpi/</div>
+                        <div class="deliv-desc">— 20 formula unit tests</div>
+                    </div>
+                </div>
+
+                <!-- Exit Criteria Block Wrapper -->
+                <div class="exit-card">
+                    <h4 class="exit-title"><span>✓</span> Exit criteria · Definition of Done</h4>
+                    <div class="exit-inner-box">
+                        <div class="exit-row">
+                            <span class="exit-check-text">SELECT COUNT(*) FROM financial_ratios</span>
+                            <span class="exit-val">>= 1,100 rows</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">All 14 KPI columns populated</span>
+                            <span class="exit-val">zero null-only</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">All 20 KPI formula unit tests pass</span>
+                            <span class="exit-val">0 failures</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">Manual spot-check matching within 0.1%</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">ratio_edge_cases.log documented</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">Sprint 2 review meeting signed off</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

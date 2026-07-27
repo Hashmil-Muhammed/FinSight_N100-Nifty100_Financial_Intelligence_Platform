@@ -1,0 +1,93 @@
+Company ID,Actual Sector,Predicted Tag,Keywords Matched,Validation Status
+ABB,Not Found,Unknown,None,❓ UNKNOWN
+ADANIENSOL,Not Found,Energy,"energy, power",⚠️ MISMATCH
+ADANIENT,Not Found,Energy,"coal, exploration",⚠️ MISMATCH
+ADANIGREEN,Not Found,Energy,"energy, power, renewable",⚠️ MISMATCH
+ADANIPORTS,Not Found,Construction,infrastructure,⚠️ MISMATCH
+ADANIPOWER,Not Found,Energy,power,⚠️ MISMATCH
+AMBUJACEM,Not Found,Metals & Mining,cement,⚠️ MISMATCH
+APOLLOHOSP,Not Found,Healthcare,"healthcare, hospital",⚠️ MISMATCH
+ASIANPAINT,Not Found,Chemicals,paints,⚠️ MISMATCH
+ATGL,Not Found,Automobile,vehicle,⚠️ MISMATCH
+AXISBANK,Not Found,Financial Services,bank,⚠️ MISMATCH
+BAJAJ-AUTO,Not Found,Automobile,"auto, two-wheeler",⚠️ MISMATCH
+BAJAJFINSV,Not Found,Financial Services,"insurance, wealth, lending",⚠️ MISMATCH
+BAJAJHLDNG,Not Found,Financial Services,"bank, credit, investment",⚠️ MISMATCH
+BAJFINANCE,Not Found,Financial Services,"finance, lending",⚠️ MISMATCH
+BANKBARODA,Not Found,Financial Services,bank,⚠️ MISMATCH
+BEL,Not Found,Unknown,None,❓ UNKNOWN
+BHARTIARTL,Not Found,Unknown,None,❓ UNKNOWN
+BHEL,Not Found,IT,technology,⚠️ MISMATCH
+BOSCHLTD,Not Found,Energy,"energy, power",⚠️ MISMATCH
+BPCL,Not Found,Energy,"oil, petroleum",⚠️ MISMATCH
+BRITANNIA,Not Found,FMCG,"food, beverages, household",⚠️ MISMATCH
+CANBK,Not Found,Financial Services,bank,⚠️ MISMATCH
+CHOLAFIN,Not Found,Financial Services,"finance, loan, investment",⚠️ MISMATCH
+CIPLA,Not Found,Unknown,None,❓ UNKNOWN
+COALINDIA,Not Found,Metals & Mining,"steel, mining, cement",⚠️ MISMATCH
+DABUR,Not Found,FMCG,"consumer, fmcg, food",⚠️ MISMATCH
+DIVISLAB,Not Found,Healthcare,api,⚠️ MISMATCH
+DLF,Not Found,Construction,"construction, real estate",⚠️ MISMATCH
+DMART,Not Found,FMCG,fmcg,⚠️ MISMATCH
+DRREDDY,Not Found,Unknown,None,❓ UNKNOWN
+EICHERMOT,Not Found,Automobile,auto,⚠️ MISMATCH
+GAIL,Not Found,Energy,"gas, power",⚠️ MISMATCH
+GODREJCP,Not Found,FMCG,consumer,⚠️ MISMATCH
+GRASIM,Not Found,Unknown,None,❓ UNKNOWN
+HAL,Not Found,Unknown,None,❓ UNKNOWN
+HAVELLS,Not Found,Energy,power,⚠️ MISMATCH
+HCLTECH,Not Found,IT,"software, it services, tech",⚠️ MISMATCH
+HDFCBANK,Not Found,Financial Services,bank,⚠️ MISMATCH
+HDFCLIFE,Not Found,Financial Services,insurance,⚠️ MISMATCH
+HEROMOTOCO,Not Found,Unknown,None,❓ UNKNOWN
+HINDALCO,Not Found,Metals & Mining,"aluminium, copper",⚠️ MISMATCH
+HINDUNILVR,Not Found,FMCG,"fmcg, personal care",⚠️ MISMATCH
+ICICIBANK,Not Found,Financial Services,bank,⚠️ MISMATCH
+ICICIGI,Not Found,Financial Services,insurance,⚠️ MISMATCH
+ICICIPRULI,Not Found,Financial Services,"bank, insurance",⚠️ MISMATCH
+INDIGO,Not Found,Unknown,None,❓ UNKNOWN
+INDUSINDBK,Not Found,Financial Services,bank,⚠️ MISMATCH
+INFY,Not Found,IT,"technology, digital, consulting",⚠️ MISMATCH
+IOC,Not Found,Energy,"oil, gas, petroleum",⚠️ MISMATCH
+IRCTC,Not Found,Unknown,None,❓ UNKNOWN
+IRFC,Not Found,Financial Services,finance,⚠️ MISMATCH
+ITC,Not Found,IT,technology,⚠️ MISMATCH
+JINDALSTEL,Not Found,Metals & Mining,"steel, mining",⚠️ MISMATCH
+JIOFIN,Not Found,Unknown,None,❓ UNKNOWN
+JSWENERGY,Not Found,Energy,"energy, power",⚠️ MISMATCH
+JSWSTEEL,Not Found,Metals & Mining,steel,⚠️ MISMATCH
+KOTAKBANK,Not Found,Financial Services,"bank, finance, insurance, investment",⚠️ MISMATCH
+LICI,Not Found,Financial Services,insurance,⚠️ MISMATCH
+LODHA,Not Found,Construction,real estate,⚠️ MISMATCH
+LT,Not Found,Unknown,None,❓ UNKNOWN
+LTIM,Not Found,IT,"technology, consulting",⚠️ MISMATCH
+M&M,Not Found,Unknown,None,❓ UNKNOWN
+MARUTI,Not Found,Automobile,motor,⚠️ MISMATCH
+MOTHERSON,Not Found,Automobile,automotive,⚠️ MISMATCH
+NAUKRI,Not Found,Financial Services,investment,⚠️ MISMATCH
+NESTLEIND,Not Found,FMCG,"food, beverages",⚠️ MISMATCH
+NHPC,Not Found,Energy,power,⚠️ MISMATCH
+NTPC,Not Found,Energy,power,⚠️ MISMATCH
+ONGC,Not Found,Energy,"oil, gas, petroleum",⚠️ MISMATCH
+PFC,Not Found,Financial Services,finance,⚠️ MISMATCH
+PIDILITIND,Not Found,Construction,construction,⚠️ MISMATCH
+PNB,Not Found,Financial Services,bank,⚠️ MISMATCH
+POWERGRID,Not Found,Energy,"power, grid",⚠️ MISMATCH
+RECLTD,Not Found,Energy,power,⚠️ MISMATCH
+RELIANCE,Not Found,Unknown,None,❓ UNKNOWN
+SBILIFE,Not Found,Financial Services,"bank, insurance",⚠️ MISMATCH
+SBIN,Not Found,Financial Services,bank,⚠️ MISMATCH
+SHREECEM,Not Found,Metals & Mining,cement,⚠️ MISMATCH
+SHRIRAMFIN,Not Found,Financial Services,finance,⚠️ MISMATCH
+SIEMENS,Not Found,Unknown,None,❓ UNKNOWN
+SUNPHARMA,Not Found,Healthcare,pharma,⚠️ MISMATCH
+TATACONSUM,Not Found,FMCG,"consumer, food, beverages",⚠️ MISMATCH
+TATAMOTORS,Not Found,Telecom,network,⚠️ MISMATCH
+TATAPOWER,Not Found,Energy,"power, solar, renewable",⚠️ MISMATCH
+TATASTEEL,Not Found,Metals & Mining,"steel, mining, iron",⚠️ MISMATCH
+TCS,Not Found,IT,"it services, technology, consulting",⚠️ MISMATCH
+TECHM,Not Found,IT,"it services, tech",⚠️ MISMATCH
+TITAN,Not Found,Unknown,None,❓ UNKNOWN
+TORNTPHARM,Not Found,Energy,"gas, power",⚠️ MISMATCH
+TRENT,Not Found,FMCG,"food, retail",⚠️ MISMATCH
+TVSMOTOR,Not Found,Automobile,motor,⚠️ MISMATCH

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N100 Financial Intelligence Platform - Project Description</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f8fa;
+            color: #1e293b;
+            padding: 30px 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+        }
+        
+        /* Header Section */
+        .header {
+            display: table;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        .header-left {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .header-right {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+        }
+        .main-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+        .main-title span {
+            color: #1e40af;
+        }
+        .sub-meta {
+            font-size: 13.5px;
+            color: #64748b;
+            margin-top: 6px;
+        }
+        .sub-meta span {
+            margin-right: 12px;
+        }
+        .badge-production {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: #1e40af;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* Top Kpi Cards Grid */
+        .kpi-row {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 12px 0;
+            margin: 0 -12px 30px -12px;
+        }
+        .kpi-card {
+            display: table-cell;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+        .kpi-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .kpi-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .kpi-value span {
+            font-size: 13px;
+            font-weight: 500;
+            color: #64748b;
+            margin-left: 4px;
+        }
+
+        /* Epic Block */
+        .epic-block {
+            background-color: #fdfdfd;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 35px;
+        }
+        .epic-header {
+            margin-bottom: 12px;
+        }
+        .epic-badge {
+            display: inline-block;
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-right: 8px;
+            letter-spacing: 0.5px;
+        }
+        .epic-title {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            vertical-align: middle;
+        }
+        .epic-description {
+            font-size: 14.5px;
+            color: #334155;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .tag-container {
+            font-size: 0;
+        }
+        .epic-tag {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+            padding-bottom: 6px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 3px;
+            background-color: #2563eb;
+            border-radius: 2px;
+        }
+
+        /* Capabilities Grid Layout using Tables for proper layout rendering */
+        .grid-table {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 16px;
+            margin: -16px;
+            margin-bottom: 25px;
+        }
+        .grid-row {
+            display: table-row;
+        }
+        .grid-cell {
+            display: table-cell;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            vertical-align: top;
+        }
+        .cell-icon {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #2563eb;
+        }
+        .cell-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .cell-desc {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        /* Timeline / Roadmap Section */
+        .roadmap-container {
+            margin-bottom: 35px;
+        }
+        .roadmap-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 10px 24px;
+            margin-bottom: 10px;
+            display: table;
+            width: 100%;
+        }
+        .sprint-badge-cell {
+            display: table-cell;
+            width: 90px;
+            vertical-align: middle;
+        }
+        .sprint-badge {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+        .sprint-content-cell {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 15px;
+        }
+        .sprint-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .sprint-desc {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 400;
+        }
+        .sprint-days-cell {
+            display: table-cell;
+            width: 100px;
+            text-align: right;
+            vertical-align: middle;
+        }
+        .sprint-days {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Tech Stack & Technical Details Split Layout */
+        .tech-table {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+            margin: 0 -20px 35px -20px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+        }
+        .tech-column {
+            display: table-cell;
+            vertical-align: top;
+        }
+        .tech-column-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 14px;
+        }
+        .tech-list {
+            list-style: none;
+        }
+        .tech-list li {
+            font-size: 13px;
+            color: #334155;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 18px;
+        }
+        /* Custom check icon styling for lists */
+        .tech-list.checked li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        .tech-list.arrowed li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: #64748b;
+            font-weight: bold;
+            font-size: 16px;
+            top: -2px;
+        }
+
+        /* Bands Container Section */
+        .bands-container {
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+        .band-row {
+            background-color: #f8fafc;
+            border-radius: 30px;
+            padding: 12px 24px;
+            font-size: 0;
+        }
+        .band-item {
+            display: inline-block;
+            font-size: 13.5px;
+            margin-right: 24px;
+            color: #334155;
+        }
+        .band-pill {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+        }
+        .pill-excellent { background-color: #15803d; }
+        .pill-good { background-color: #16a34a; }
+        .pill-average { background-color: #eab308; color: #0f172a; }
+        .pill-weak { background-color: #ea580c; }
+        .pill-poor { background-color: #dc2626; }
+
+        /* Footer Section */
+        .footer {
+            margin-top: 35px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 16px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Top Bar / Main Header -->
+    <div class="header">
+        <div class="header-left">
+            <h1 class="main-title">📊 N100 <span>· Financial Intelligence</span></h1>
+            <div class="sub-meta">
+                <span>📁 92 companies</span>
+                <span>📈 30+ KPIs</span>
+                <span>⏱️ 45-day build</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <span class="badge-production">🚀 v1.0 · production ready</span>
+        </div>
+    </div>
+
+    <!-- KPI Highlight Cards Row -->
+    <div class="kpi-row">
+        <div class="kpi-card">
+            <div class="kpi-label">🏢 Companies</div>
+            <div class="kpi-value">92 <span>N100</span></div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">📊 Financial KPIs</div>
+            <div class="kpi-value">30+ <span>per company</span></div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">🎛️ Screener Filters</div>
+            <div class="kpi-value">18 <span>configurable</span></div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">🌐 Sectors</div>
+            <div class="kpi-value">11 <span>broad</span></div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">📄 Reports</div>
+            <div class="kpi-value">103 <span>PDF · Excel</span></div>
+        </div>
+    </div>
+
+    <!-- Epic Project Summary Card -->
+    <div class="epic-block">
+        <div class="epic-header">
+            <span class="epic-badge">EPIC</span>
+            <h2 class="epic-title">N100 Financial Intelligence Platform</h2>
+        </div>
+        <p class="epic-description">
+            Production-grade analytics for all 92 Nifty 100 companies. ETL pipeline, 30+ KPIs, screener, health scoring (0–100), sector & peer intelligence, automated reporting, and a Streamlit dashboard.
+        </p>
+        <div class="tag-container">
+            <span class="epic-tag">✓ ETL · 12 datasets</span>
+            <span class="epic-tag">⚖️ Health score</span>
+            <span class="epic-tag">🔀 Peer comparison</span>
+            <span class="epic-tag">📊 Excel · PDF export</span>
+            <span class="epic-tag">💻 Streamlit dashboard</span>
+        </div>
+    </div>
+
+    <!-- Core Platform Capabilities -->
+    <h3 class="section-title">⚙️ Core platform capabilities</h3>
+    
+    <div class="grid-table">
+        <div class="grid-row">
+            <div class="grid-cell">
+                <div class="cell-icon">🗄️</div>
+                <div class="cell-title">Data ingestion</div>
+                <div class="cell-desc">12 structured datasets (P&L, balance sheet, cash flow, sectors, prices, ratios…)</div>
+            </div>
+            <div class="grid-cell">
+                <div class="cell-icon">🧮</div>
+                <div class="cell-title">Financial KPI engine</div>
+                <div class="cell-desc">30+ ratios: profitability, leverage, growth, cash flow, valuation, efficiency.</div>
+            </div>
+            <div class="grid-cell">
+                <div class="cell-icon">⏳</div>
+                <div class="cell-title">Investment screener</div>
+                <div class="cell-desc">18 filters & 6 pre-built templates (Quality Growth, Debt-Free, Turnaround…)</div>
+            </div>
+            <div class="grid-cell">
+                <div class="cell-icon">❤️</div>
+                <div class="cell-title">Health score 0–100</div>
+                <div class="cell-desc">Composite score with bands: Excellent · Good · Average · Weak · Poor</div>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-cell">
+                <div class="cell-icon">📈</div>
+                <div class="cell-title">Sector analytics</div>
+                <div class="cell-desc">Median KPIs, rankings, trends across 11 sectors (Financials, IT, Energy…)</div>
+            </div>
+            <div class="grid-cell">
+                <div class="cell-icon">👥</div>
+                <div class="cell-title">Peer comparison</div>
+                <div class="cell-desc">Radar charts, percentiles, best-in-class across 11 peer groups.</div>
+            </div>
+            <div class="grid-cell">
+                <div class="cell-icon">📝</div>
+                <div class="cell-title">Automated reporting</div>
+                <div class="cell-desc">92 company PDFs + 11 sector PDFs + full universe Excel with conditional formatting.</div>
+            </div>
+            <div class="grid-cell">
+                <div class="cell-icon">🖥️</div>
+                <div class="cell-title">Streamlit dashboard</div>
+                <div class="cell-desc">Company view, screener, sector, peer comparison, health score — all interactive.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 45-Day Sprint Roadmap -->
+    <h3 class="section-title">📋 45-day sprint roadmap</h3>
+    
+    <div class="roadmap-container">
+        <!-- Sprint 1 -->
+        <div class="roadmap-item">
+            <div class="sprint-badge-cell">
+                <span class="sprint-badge">Sprint 1</span>
+            </div>
+            <div class="sprint-content-cell">
+                <span class="sprint-title">Foundation & ETL</span> 
+                <span class="sprint-desc">Load, normalize, validate 12 datasets · SQLite schema</span>
+            </div>
+            <div class="sprint-days-cell">
+                <span class="sprint-days">Days 1–7</span>
+            </div>
+        </div>
+
+        <!-- Sprint 2 -->
+        <div class="roadmap-item">
+            <div class="sprint-badge-cell">
+                <span class="sprint-badge">Sprint 2</span>
+            </div>
+            <div class="sprint-content-cell">
+                <span class="sprint-title">Financial ratio engine</span> 
+                <span class="sprint-desc">30+ KPIs · growth, leverage, cash flow · validation vs public data</span>
+            </div>
+            <div class="sprint-days-cell">
+                <span class="sprint-days">Days 8–14</span>
+            </div>
+        </div>
+
+        <!-- Sprint 3 -->
+        <div class="roadmap-item">
+            <div class="sprint-badge-cell">
+                <span class="sprint-badge">Sprint 3</span>
+            </div>
+            <div class="sprint-content-cell">
+                <span class="sprint-title">Screener · Scoring · Sector</span> 
+                <span class="sprint-desc">18 filters, 6 templates · health score 0–100 · sector aggregates</span>
+            </div>
+            <div class="sprint-days-cell">
+                <span class="sprint-days">Days 15–21</span>
+            </div>
+        </div>
+
+        <!-- Sprint 4 -->
+        <div class="roadmap-item">
+            <div class="sprint-badge-cell">
+                <span class="sprint-badge">Sprint 4</span>
+            </div>
+            <div class="sprint-content-cell">
+                <span class="sprint-title">Peer · Trend · Cash flow</span> 
+                <span class="sprint-desc">Peer comparison, radar data · trend flags · capital allocation matrix</span>
+            </div>
+            <div class="sprint-days-cell">
+                <span class="sprint-days">Days 22–28</span>
+            </div>
+        </div>
+
+        <!-- Sprint 5 -->
+        <div class="roadmap-item">
+            <div class="sprint-badge-cell">
+                <span class="sprint-badge">Sprint 5</span>
+            </div>
+            <div class="sprint-content-cell">
+                <span class="sprint-title">Dashboard & reporting</span> 
+                <span class="sprint-desc">Streamlit (5 pages) · PDF (company/sector) · Excel exports</span>
+            </div>
+            <div class="sprint-days-cell">
+                <span class="sprint-days">Days 29–35</span>
+            </div>
+        </div>
+
+        <!-- Sprint 6 -->
+        <div class="roadmap-item">
+            <div class="sprint-badge-cell">
+                <span class="sprint-badge">Sprint 6</span>
+            </div>
+            <div class="sprint-content-cell">
+                <span class="sprint-title">Alerts · Testing · Docs</span> 
+                <span class="sprint-desc">Watchlist, alert rules · full integration tests · README & delivery</span>
+            </div>
+            <div class="sprint-days-cell">
+                <span class="sprint-days">Days 36–45</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tech Stack, Quality and Key Metrics Box -->
+    <div class="tech-table">
+        <div class="tech-column">
+            <div class="tech-column-title">&lt;/&gt; Tech stack</div>
+            <ul class="tech-list checked">
+                <li>Python 3.10+ · pandas · numpy</li>
+                <li>SQLite · openpyxl · xlrd</li>
+                <li>Streamlit · plotly · matplotlib</li>
+                <li>ReportLab · pytest · pytest-cov</li>
+            </ul>
+        </div>
+        <div class="tech-column">
+            <div class="tech-column-title">🛡️ Quality & delivery</div>
+            <ul class="tech-list checked">
+                <li>≥80% test coverage</li>
+                <li>14 DQ rules · validation report</li>
+                <li>103 reports (92 company + 11 sector)</li>
+                <li>Full universe Excel · screener export</li>
+            </ul>
+        </div>
+        <div class="tech-column">
+            <div class="tech-column-title">🔑 Key metrics</div>
+            <ul class="tech-list arrowed">
+                <li>ROE · ROCE · NPM · OPM</li>
+                <li>D/E · Interest coverage · FCF</li>
+                <li>CAGR (1/3/5/10Y) · margin expansion</li>
+                <li>PE · PB · EV/EBITDA</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Health Score Bands Section -->
+    <h3 class="section-title">💙 Health score bands</h3>
+    <div class="bands-container">
+        <div class="band-row">
+            <div class="band-item"><span class="band-pill pill-excellent">80–100</span> Excellent</div>
+            <div class="band-item"><span class="band-pill pill-good">65–79</span> Good</div>
+            <div class="band-item"><span class="band-pill pill-average">50–64</span> Average</div>
+            <div class="band-item"><span class="band-pill pill-weak">35–49</span> Weak</div>
+            <div class="band-item"><span class="band-pill pill-poor">0–34</span> Poor</div>
+        </div>
+    </div>
+
+    <!-- Bottom Metadata Footer -->
+    <div class="footer">
+        🤖 N100 Financial Intelligence Platform · 45-day build · all values in ₹ crore unless stated otherwise
+    </div>
+
+</div>
+
+</body>
+</html>

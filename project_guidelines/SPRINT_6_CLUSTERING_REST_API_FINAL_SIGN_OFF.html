@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 6 - Clustering, REST API & Final Sign-Off</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f8fa;
+            color: #1e293b;
+            padding: 30px 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+        }
+        
+        /* Blue Hero Banner */
+        .hero-banner {
+            background-color: #1a5276;
+            border-radius: 24px;
+            padding: 30px 35px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1);
+        }
+        .hero-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .hero-icon {
+            font-size: 32px;
+            margin-right: 15px;
+        }
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .hero-title span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        .hero-meta-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hero-meta-item {
+            font-size: 13.5px;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+        .hero-meta-item span { margin-right: 6px; }
+        .hero-badge {
+            background-color: #facc15;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12.5px;
+            margin-left: auto;
+        }
+
+        /* Sprint Goal Section */
+        .goal-card {
+            border: 1px solid #bfdbfe;
+            border-left: 5px solid #2563eb;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+        }
+        .goal-header {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        .goal-header span { margin-right: 8px; }
+        .goal-text {
+            font-size: 14.5px;
+            color: #334155;
+            line-height: 1.6;
+        }
+        .text-bold { font-weight: 600; color: #0f172a; }
+
+        /* Split Columns Layout */
+        .split-layout {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        .left-col { flex: 1.1; }
+        .right-col { flex: 0.9; }
+
+        /* General Module Card Layout */
+        .module-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            height: 100%;
+        }
+        .module-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .module-title span { margin-right: 8px; color: #2563eb; }
+
+        /* Day Tasks Timeline items */
+        .day-item {
+            display: flex;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+        .day-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .day-badge-col { width: 75px; flex-shrink: 0; }
+        .day-badge {
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            border: 1px solid #dbeafe;
+        }
+        .day-content { flex-grow: 1; }
+        .day-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .day-desc {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .day-desc li {
+             margin-bottom: 6px;
+        }
+        
+        .code-style {
+            font-family: monospace;
+            background-color: #f1f5f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #334155;
+        }
+
+        /* Inline badges inside descriptions */
+        .inline-badge {
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-right: 4px;
+            display: inline-block;
+        }
+        .badge-critical { background-color: #fee2e2; color: #dc2626; }
+        .badge-warning { background-color: #fef9c3; color: #ca8a04; }
+        .badge-info { background-color: #e0f2fe; color: #0284c7; }
+        .badge-success { background-color: #dcfce7; color: #16a34a; }
+        .badge-dark { background-color: #1e293b; color: #f8fafc; }
+
+        /* Deliverables List Item Layout */
+        .deliv-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .deliv-item:last-child { margin-bottom: 0; }
+        .deliv-icon {
+            font-size: 15px;
+            color: #2563eb;
+            width: 24px;
+            margin-top: 2px;
+        }
+        .deliv-details { flex-grow: 1; }
+        .deliv-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .deliv-desc {
+            font-size: 12.5px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* Done / Exit Criteria Card Box Layout */
+        .exit-card {
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #16a34a;
+            border-radius: 16px;
+            padding: 24px;
+            background-color: #f8fafc;
+            margin-top: 24px;
+        }
+        .exit-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #14532d;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .exit-title span { margin-right: 8px; color: #16a34a; }
+        .exit-inner-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        
+        /* Adjust exit rows for Sprint 6 due to high volume */
+        .exit-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            font-size: 12.5px;
+            color: #334155;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .exit-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .exit-check-text {
+            display: flex;
+            align-items: flex-start;
+        }
+        .exit-check-text::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        .exit-val {
+            font-family: monospace;
+            font-weight: 600;
+            color: #0f172a;
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            white-space: nowrap;
+            margin-left: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Blue Hero Module -->
+    <div class="hero-banner">
+        <div class="hero-title-row">
+            <div class="hero-icon">🚀</div>
+            <h1 class="hero-title">SPRINT 6 <span>· Clustering + REST API + QA + Sign-Off</span></h1>
+        </div>
+        <div class="hero-meta-row">
+            <div class="hero-meta-item"><span>📅</span> Day 36 – 45</div>
+            <div class="hero-meta-item"><span>📋</span> 89 SP</div>
+            <div class="hero-meta-item"><span>🥞</span> Epics 10, 11 & 12</div>
+            <div class="hero-badge">🏁 89 SP</div>
+        </div>
+    </div>
+
+    <!-- Sprint Goal Section Banner -->
+    <div class="goal-card">
+        <div class="goal-header">
+            <span>🎯</span> Sprint Goal
+        </div>
+        <p class="goal-text">
+            By end of Sprint 6, all 16 FastAPI endpoints must be live and returning correct data. KMeans clustering must assign all 92 companies to one of 5 labelled archetypes. The full pytest suite must show 60+ tests with 0 failures. All 20 acceptance gates must be verified and the project signed off on Day 45.
+        </p>
+    </div>
+
+    <!-- Split Columns Layout: Daily Tasks vs Deliverables -->
+    <div class="split-layout">
+        
+        <!-- Left Column: Daily Tasks -->
+        <div class="left-col">
+            <div class="module-card">
+                <h3 class="module-title"><span>⏳</span> Daily tasks</h3>
+                
+                <!-- Day 36 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 36</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">KMeans Clustering</h4>
+                        <ul class="day-desc">
+                            <li>Write <span class="code-style">src/analytics/clustering.py</span> implementing KMeans clustering with 5 clusters</li>
+                            <li>Features to use: return_on_equity_pct, debt_to_equity, revenue_cagr_5yr, fcf_cagr_5yr, operating_profit_margin_pct</li>
+                            <li>Before scaling: impute missing values with sector median for each metric</li>
+                            <li>Apply StandardScaler to normalise all features to zero mean and unit variance</li>
+                            <li>Run KMeans with n_clusters=5, random_state=42 — for reproducibility</li>
+                            <li>Generate elbow plot (inertia vs k from 2 to 10) — save as <span class="code-style">reports/elbow_plot.png</span> — confirm k=5 is near the elbow</li>
+                            <li>Generate <span class="code-style">output/cluster_labels.csv</span> with columns: company_id, cluster_id (0-4), cluster_name, distance_from_centroid</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 37 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 37</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Cluster Profiling & Statistics</h4>
+                        <ul class="day-desc">
+                            <li>Profile each cluster: compute mean and median of all 5 input features per cluster</li>
+                            <li>Assign descriptive names to the 5 clusters based on their financial profiles — example names: High-Quality Compounders, Defensive Dividend Payers, Value Cyclicals, Distressed or Turnaround, Emerging Growth</li>
+                            <li>Review cluster names with team lead — adjust based on which actual companies are in each cluster</li>
+                            <li>Generate correlation matrix heatmap: Pearson correlation of 10 KPIs across all 92 companies for latest year — save as <span class="code-style">reports/correlation_heatmap.png</span> using seaborn heatmap with annotation</li>
+                            <li>Outlier detection: compute Z-score for each metric per broad_sector — flag companies where any metric has absolute Z-score > 3 — save to <span class="code-style">output/outlier_report.csv</span></li>
+                            <li>Generate <span class="code-style">output/portfolio_stats.csv</span> with P10, P25, P50, P75, P90, Mean, Std for each KPI across all 92 companies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 38 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 38</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">FastAPI Server Scaffold</h4>
+                        <ul class="day-desc">
+                            <li>Write <span class="code-style">src/api/main.py</span> — FastAPI application with SQLite connection function</li>
+                            <li>Add CORS middleware to allow all origins (internal use only)</li>
+                            <li>Add request logging middleware — log method, path, and response time for every request</li>
+                            <li>Create <span class="code-style">routers/</span> directory with one file per module: companies.py, screener.py, sectors.py, peers.py, valuation.py, portfolio.py, documents.py, health.py</li>
+                            <li>Import all routers in main.py with prefix <span class="code-style">/api/v1</span></li>
+                            <li>Implement <span class="code-style">GET /api/v1/health</span> endpoint — return: status=ok, db_row_counts for all 10 tables, uptime_seconds, version string</li>
+                            <li>Verify: <span class="code-style">uvicorn src.api.main:app --port 8000</span> starts without error and /docs shows OpenAPI documentation page</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 39 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 39</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">API Endpoints — Company Data</h4>
+                        <ul class="day-desc">
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies</span> — return list of all 92 companies with id, company_name, broad_sector, sub_sector, roe_pct, roce_pct — support optional filter parameters: sector, market_cap_category, search</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}</span> — return full company profile: all companies fields + latest year KPIs + sector data — return HTTP 404 if ticker not found</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/pl</span> — return P&L history array — support from_year and to_year query params</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/bs</span> — return balance sheet history array — same year filter params</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/cashflow</span> — return cash flow history array — same year filter params</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/ratios</span> — return all computed KPIs per year for the company</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/tearsheet</span> — return the pre-generated tearsheet PDF as a binary file download</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 40 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 40</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">API Endpoints — Screener, Sector, Peer & Remaining</h4>
+                        <ul class="day-desc">
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/screener</span> — screener endpoint with query params: min_roe, max_de, min_fcf, sector, min_rev_cagr_5yr, min_pat_cagr_5yr, max_pe — return ranked company list</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/sectors</span> — return all 11 sectors with company_count, median_roe, median_pe, median_de</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/sectors/{sector}/companies</span> — return all companies in a sector with latest year KPIs</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/peers/{group_name}</span> — return all companies in a peer group with percentile rank for each of 10 metrics</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/peers/compare</span> — return radar data: 8 axis metric values for the company + peer group average + benchmark company</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/market-cap/{ticker}</span> — return historical valuation multiples</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/portfolio/stats</span> — return P10 through P90 percentile table for 10 core KPIs across all 92 companies</li>
+                            <li><span class="inline-badge badge-info">GET</span> <span class="code-style">/api/v1/companies/{ticker}/documents</span> — return annual report links with is_url_valid boolean flag</li>
+                            <li>Export OpenAPI spec: save <span class="code-style">docs/openapi.json</span> — export Postman collection JSON</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Day 41 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 41</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">ETL & KPI Unit Tests</h4>
+                        <ul class="day-desc">
+                            <li>Write <span class="code-style">tests/etl/test_normalise.py</span> — 20 unit tests for normalize_year()</li>
+                            <li>Write <span class="code-style">tests/etl/test_loader.py</span> — 10 unit tests verifying loader reads correct row counts and column names</li>
+                            <li>Write <span class="code-style">tests/kpi/test_ratios.py</span> — 20 unit tests covering: ROE, D/E edge cases, ICR when interest=0, CAGR turnaround flag, decline-to-loss, CFO quality score</li>
+                            <li>Write <span class="code-style">tests/dq/test_rules.py</span> — 14 unit tests — one per DQ rule — verifying the correct rule_id and severity are returned</li>
+                            <li>Run: <span class="code-style">pytest tests/etl/ tests/kpi/ tests/dq/ -v</span> — fix any failures — all tests must pass</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Day 42 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 42</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">API Tests & Integration</h4>
+                        <ul class="day-desc">
+                            <li>Write API tests for health endpoint, companies, screener, and sectors</li>
+                            <li>Generate pytest HTML report: <span class="code-style">pytest tests/ --html=reports/pytest_report.html</span> — must show >= 60 tests with 0 failures</li>
+                            <li>Integration test: verify dashboard data loads correctly from the API — check that screener results in the Streamlit app match the API screener endpoint results</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Day 43 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 43</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Performance & Integration Testing</h4>
+                        <ul class="day-desc">
+                            <li>Load test: run 10 concurrent screener API calls — target: all 10 complete within 10 seconds</li>
+                            <li>Dashboard performance: measure load time for Company Profile screen on 5 tickers — must be under 3 seconds each</li>
+                            <li>End-to-end test: start both Streamlit (port 8501) and FastAPI (port 8000) simultaneously</li>
+                            <li>Document any performance bottlenecks found in <span class="code-style">output/perf_notes.md</span></li>
+                            <li>Apply SQLite query optimisation if needed — add indexes on company_id and year columns</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Day 44 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 44</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Documentation</h4>
+                        <ul class="day-desc">
+                            <li>Write <span class="code-style">docs/analyst_guide.pdf</span> (at least 10 pages) covering Streamlit usage, PDF generation, API calls, and troubleshooting</li>
+                            <li>Complete all docstrings in src/ — every public function must have a one-line docstring</li>
+                            <li>Update <span class="code-style">README.md</span> — project overview, setup steps, run instructions</li>
+                            <li>Final code quality pass: run black and ruff — fix all issues</li>
+                            <li>Archive all 23 deliverables to <span class="code-style">output/final_deliverables/</span> directory</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Day 45 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 45</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Final Sign-Off</h4>
+                        <ul class="day-desc">
+                            <li>Run all 20 acceptance gates from the project document (AC-01 through AC-20)</li>
+                            <li>Complete <span class="code-style">docs/acceptance_checklist.pdf</span> — mark each of 23 deliverables as present with file path</li>
+                            <li>Team lead reviews checklist and signs acceptance_checklist.pdf — date stamped Day 45</li>
+                            <li>Archive project to final deliverables directory</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Column: Deliverables & Exit Criteria -->
+        <div class="right-col">
+            <div class="module-card">
+                <h3 class="module-title"><span>🧺</span> Deliverables</h3>
+                
+                <div class="deliv-item">
+                    <div class="deliv-icon">📄</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/cluster_labels.csv</div>
+                        <div class="deliv-desc">— all 92 companies with cluster ID and cluster name</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📈</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">reports/elbow_plot.png</div>
+                        <div class="deliv-desc">— KMeans elbow curve confirming k=5</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📈</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">reports/correlation_heatmap.png</div>
+                        <div class="deliv-desc">— Pearson correlation of 10 KPIs</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📄</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/outlier_report.csv</div>
+                        <div class="deliv-desc">— companies with Z-score > 3 in any metric</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📊</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/portfolio_stats.csv</div>
+                        <div class="deliv-desc">— P10 to P90 for all KPIs</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">🌐</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">src/api/</div>
+                        <div class="deliv-desc">— FastAPI server with 16 endpoints</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">⚙️</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">docs/openapi.json</div>
+                        <div class="deliv-desc">— OpenAPI 3.0 specification</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📑</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">reports/pytest_report.html</div>
+                        <div class="deliv-desc">— full test suite results</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📖</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">docs/analyst_guide.pdf</div>
+                        <div class="deliv-desc">— 10+ page user guide</div>
+                    </div>
+                </div>
+
+                <!-- Exit Criteria Block Wrapper (20 Gates) -->
+                <div class="exit-card">
+                    <h4 class="exit-title"><span>✓</span> 20 Acceptance Gates (Definition of Done)</h4>
+                    <div class="exit-inner-box">
+                        <div class="exit-row"><span class="exit-check-text">AC-01: SELECT COUNT(*) FROM companies</span><span class="exit-val">= 92</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-02: >= 90% have >= 10 years of records</span><span class="exit-val">Pass</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-03: PRAGMA foreign_key_check</span><span class="exit-val">0 rows</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-04: SELECT COUNT(*) FROM financial_ratios</span><span class="exit-val">>= 1,100</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-05: Revenue CAGR matches Excel</span><span class="exit-val">< 0.1% diff</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-06: ROE matches companies source</span><span class="exit-val">< 5% diff</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-07: Quality screener preset returns</span><span class="exit-val">10 - 50</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-08: Company Profile screen load time</span><span class="exit-val">< 3 sec</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-09: CSV download valid & well-formed</span><span class="exit-val">Pass</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-10: No text overflow in sampled tearsheets</span><span class="exit-val">Pass</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-11: GET /api/v1/health</span><span class="exit-val">HTTP 200</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-12: TCS ratios endpoint history</span><span class="exit-val">10+ years</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-13: API screener matches Excel output</span><span class="exit-val">Pass</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-14: peer_percentiles table populated</span><span class="exit-val">11 groups</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-15: cluster_id assigned to all</span><span class="exit-val">92 com.</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-16: 1+ pro and 1+ con generated</span><span class="exit-val">92 com.</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-17: 92 tearsheet PDFs exist</span><span class="exit-val">>= 30 KB</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-18: pytest shows 60+ tests collected</span><span class="exit-val">0 failures</span></div>
+                        <div class="exit-row"><span class="exit-check-text">AC-19: validation_failures.csv exists</span><span class="exit-val">Pass</span></div>
+                        <div class="exit-row"><span class="exit-val" style="margin-left:0; margin-right:8px">AC-20</span> analyst_guide.pdf is >= 10 pages</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

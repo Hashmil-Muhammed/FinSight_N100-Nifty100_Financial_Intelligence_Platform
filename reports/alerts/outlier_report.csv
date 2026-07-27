@@ -1,0 +1,6 @@
+company_id,sector,metric,value,sector_mean,sector_std,z_score,flag
+BAJAJHLDNG,Unknown,REVENUE_CAGR_3Y,52.99,14.62,10.86,3.53,Outlier 🚨
+TRENT,Unknown,REVENUE_CAGR_3Y,49.49,14.62,10.86,3.21,Outlier 🚨
+ZOMATO,Unknown,REVENUE_CAGR_3Y,62.45,14.62,10.86,4.4,Outlier 🚨
+TRENT,Unknown,PAT_CAGR_3Y,272.5,19.01,36.62,6.92,Outlier 🚨
+TRENT,Unknown,EPS_CAGR_3Y,157.13,16.47,27.98,5.03,Outlier 🚨

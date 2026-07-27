@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 1 - Data Foundation Project Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f8fa;
+            color: #1e293b;
+            padding: 30px 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+        }
+        
+        /* Blue Hero Banner */
+        .hero-banner {
+            background-color: #1a5276;
+            border-radius: 24px;
+            padding: 30px 35px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1);
+        }
+        .hero-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .hero-icon {
+            font-size: 32px;
+            margin-right: 15px;
+        }
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .hero-title span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        .hero-meta-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hero-meta-item {
+            font-size: 13.5px;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+        .hero-meta-item span { margin-right: 6px; }
+        .hero-badge {
+            background-color: #facc15;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12.5px;
+            margin-left: auto;
+        }
+
+        /* Sprint Goal Section */
+        .goal-card {
+            border: 1px solid #bfdbfe;
+            border-left: 5px solid #2563eb;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+        }
+        .goal-header {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        .goal-header span { margin-right: 8px; }
+        .goal-text {
+            font-size: 14.5px;
+            color: #334155;
+            line-height: 1.6;
+        }
+        .text-bold { font-weight: 600; color: #0f172a; }
+
+        /* Split Columns Layout */
+        .split-layout {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        .left-col { flex: 1.1; }
+        .right-col { flex: 0.9; }
+
+        /* General Module Card Layout */
+        .module-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            height: 100%;
+        }
+        .module-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .module-title span { margin-right: 8px; color: #2563eb; }
+
+        /* Day Tasks Timeline items */
+        .day-item {
+            display: flex;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+        .day-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .day-badge-col { width: 75px; flex-shrink: 0; }
+        .day-badge {
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            border: 1px solid #dbeafe;
+        }
+        .day-content { flex-grow: 1; }
+        .day-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .day-desc {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.5;
+        }
+        .day-desc span { color: #64748b; font-weight: 500; }
+
+        /* Inline badges inside descriptions */
+        .inline-badge {
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-right: 4px;
+            display: inline-block;
+        }
+        .badge-critical { background-color: #fee2e2; color: #dc2626; }
+        .badge-warning { background-color: #fef9c3; color: #ca8a04; }
+
+        /* Deliverables List Item Layout */
+        .deliv-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .deliv-item:last-child { margin-bottom: 0; }
+        .deliv-icon {
+            font-size: 15px;
+            color: #2563eb;
+            width: 24px;
+            margin-top: 2px;
+        }
+        .deliv-details { flex-grow: 1; }
+        .deliv-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .deliv-desc {
+            font-size: 12.5px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* Done / Exit Criteria Card Box Layout */
+        .exit-card {
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #16a34a;
+            border-radius: 16px;
+            padding: 24px;
+            background-color: #f8fafc;
+            margin-top: 24px;
+        }
+        .exit-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #14532d;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .exit-title span { margin-right: 8px; color: #16a34a; }
+        .exit-inner-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .exit-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #334155;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .exit-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .exit-check-text {
+            display: flex;
+            align-items: center;
+        }
+        .exit-check-text::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        .exit-val {
+            font-family: monospace;
+            font-weight: 600;
+            color: #0f172a;
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Pill Container Layout below Exit Box */
+        .pill-flex-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .status-pill {
+            font-size: 11.5px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            display: flex;
+            align-items: center;
+        }
+        .status-pill.success-pill::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+        .status-pill.warn-pill::before {
+            content: "⚠";
+            color: #ea580c;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+        .flag-note {
+            font-size: 12px;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .flag-note::before {
+            content: "🏳";
+            margin-right: 6px;
+            color: #16a34a;
+        }
+
+        /* Bottom Raw Meta Card details */
+        .summary-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+        .summary-row {
+            font-size: 13.5px;
+            color: #334155;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .summary-row:last-child { margin-bottom: 0; }
+        .summary-row span { margin-right: 10px; width: 20px; text-align: center; }
+
+        /* Meta Information Footer Row details */
+        .footer-meta-row {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .footer-left-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #475569;
+        }
+        .footer-pill {
+            background-color: #f1f5f9;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11.5px;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+        .footer-right-text {
+            font-size: 12.5px;
+            color: #64748b;
+        }
+        .footer-desc-bar {
+            background-color: #f8fafc;
+            padding: 10px 16px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Blue Hero Module -->
+    <div class="hero-banner">
+        <div class="hero-title-row">
+            <div class="hero-icon">💾</div>
+            <h1 class="hero-title">SPRINT 1 <span>· Data Foundation</span></h1>
+        </div>
+        <div class="hero-meta-row">
+            <div class="hero-meta-item"><span>📅</span> Day 01 – 07</div>
+            <div class="hero-meta-item"><span>📋</span> 34 SP</div>
+            <div class="hero-meta-item"><span>🥞</span> Epic 01 · Data Ingestion & ETL</div>
+            <div class="hero-badge">🏁 34 SP</div>
+        </div>
+    </div>
+
+    <!-- Sprint Goal Section Banner -->
+    <div class="goal-card">
+        <div class="goal-header">
+            <span>🎯</span> Sprint Goal
+        </div>
+        <p class="goal-text">
+            By end of Sprint 1, the team must have a fully loaded and validated SQLite database (<span class="text-bold">nifty100.db</span>) containing all 10 tables from 12 source files. All 16 data quality rules must have been run and any <span class="inline-badge badge-critical">CRITICAL</span> failures resolved. The foundation for all subsequent modules must be in place.
+        </p>
+    </div>
+
+    <!-- Split Columns Layout: Daily Tasks vs Deliverables -->
+    <div class="split-layout">
+        
+        <!-- Left Column: Daily Tasks -->
+        <div class="left-col">
+            <div class="module-card">
+                <h3 class="module-title"><span>⏳</span> Daily tasks</h3>
+                
+                <!-- Day 01 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 01</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Environment Setup</h4>
+                        <p class="day-desc">📁 Create dirs · venv · install 20 libs · .env · Makefile targets</p>
+                    </div>
+                </div>
+
+                <!-- Day 02 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 02</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Excel Loader & Normaliser</h4>
+                        <p class="day-desc">⚙️ loader.py · normalize_year() · normalize_ticker() · 35+ unit tests</p>
+                    </div>
+                </div>
+
+                <!-- Day 03 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 03</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Schema Validator — 16 DQ Rules</h4>
+                        <p class="day-desc">
+                            ✓ DQ-01 … DQ-16 · <span class="inline-badge badge-critical">CRITICAL</span> PK/FK · <span class="inline-badge badge-warning">WARNING</span> OPM, balance, sales · generate validation_failures.csv
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Day 04 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 04</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">SQLite Database Schema</h4>
+                        <p class="day-desc">🗂️ schema.sql · 10 tables · PK/FK · loader.py · PRAGMA foreign_keys = ON</p>
+                    </div>
+                </div>
+
+                <!-- Day 05 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 05</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Full Data Load — All 12 Files</h4>
+                        <p class="day-desc">
+                            ⬆ 7 core + 5 supplementary · load order · load_audit.csv · row counts: companies=92, P&L~1276, BS~1312, CF~1187, prices=5520 · FK check 0
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Day 06 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 06</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Data Quality Manual Review</h4>
+                        <p class="day-desc">📋 5 random companies · year coverage · companies with &lt;5 years · fix loader bugs · re-run</p>
+                    </div>
+                </div>
+
+                <!-- Day 07 -->
+                <div class="day-item">
+                    <div class="day-badge-col">
+                        <span class="day-badge">Day 07</span>
+                    </div>
+                    <div class="day-content">
+                        <h4 class="day-title">Sprint Wrap-Up & Review</h4>
+                        <p class="day-desc">📄 exploratory_queries.sql · unit tests 0 failures · demo nifty100.db · retrospective · update board</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Column: Deliverables & Exit Criteria -->
+        <div class="right-col">
+            <div class="module-card">
+                <h3 class="module-title"><span>🧺</span> Deliverables</h3>
+                
+                <div class="deliv-item">
+                    <div class="deliv-icon">🗄️</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">nifty100.db</div>
+                        <div class="deliv-desc">— 10 tables populated</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📄</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/load_audit.csv</div>
+                        <div class="deliv-desc">— per-table row counts & rejections</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📄</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">output/validation_failures.csv</div>
+                        <div class="deliv-desc">— DQ violations with severity</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">💻</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">src/etl/loader.py, validator.py, normaliser.py</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">🗂️</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">db/schema.sql</div>
+                        <div class="deliv-desc">— 10-table SQLite schema</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">🧪</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">tests/etl/</div>
+                        <div class="deliv-desc">— 35+ unit tests</div>
+                    </div>
+                </div>
+
+                <div class="deliv-item">
+                    <div class="deliv-icon">📑</div>
+                    <div class="deliv-details">
+                        <div class="deliv-name">notebooks/exploratory_queries.sql</div>
+                        <div class="deliv-desc">(10 queries)</div>
+                    </div>
+                </div>
+
+                <!-- Exit Criteria Block Wrapper -->
+                <div class="exit-card">
+                    <h4 class="exit-title"><span>✓</span> Exit criteria · Definition of Done</h4>
+                    <div class="exit-inner-box">
+                        <div class="exit-row">
+                            <span class="exit-check-text">SELECT COUNT(*) FROM companies</span>
+                            <span class="exit-val">= 92</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">PRAGMA foreign_key_check</span>
+                            <span class="exit-val">→ 0 rows</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">load_audit.csv</span>
+                            <span class="exit-val">→ zero CRITICAL rejections</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">35+ ETL unit tests pass</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">Manual review: 5 companies correct</span>
+                        </div>
+                        <div class="exit-row">
+                            <span class="exit-check-text">Sprint review signed off</span>
+                        </div>
+                    </div>
+
+                    <!-- Individual Sub Rules Tags -->
+                    <div class="pill-flex-wrap">
+                        <div class="status-pill success-pill">DQ-01 PK uniqueness</div>
+                        <div class="status-pill success-pill">DQ-02 (company_id, year) PK</div>
+                        <div class="status-pill success-pill">DQ-03 FK integrity</div>
+                        <div class="status-pill warn-pill">DQ-04 BS balance &lt;1%</div>
+                        <div class="status-pill warn-pill">DQ-05 OPM cross-check</div>
+                        <div class="status-pill warn-pill">DQ-06 Positive sales</div>
+                    </div>
+                    <div class="flag-note">16 DQ rules implemented · CRITICAL failures resolved before Day 05</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Ingestion Structure Context Summary -->
+    <div class="summary-card">
+        <div class="summary-row">
+            <span>📄</span> <strong>12 source files</strong> &middot; 7 core Excel + 5 supplementary
+        </div>
+        <div class="summary-row">
+            <span>🗄️</span> <strong>10 tables:</strong> companies, profitandloss, balancesheet, cashflow, analysis, documents, prosandcons, sectors, stock_prices, financial_ratios, peer_groups
+        </div>
+        <div class="summary-row">
+            <span>📊</span> <strong>Load audit:</strong> companies=92, P&L~1276, BS~1312, CF~1187, stock_prices=5520
+        </div>
+    </div>
+
+    <!-- Bottom Metadata Footer Bar -->
+    <div class="footer-meta-row">
+        <div class="footer-left-pills">
+            <span>🗓️ Sprint 1 &middot; Day 01–07 &middot; 34 story points</span>
+            <div class="footer-pill">🧪 Unit tests: 35+</div>
+            <div class="footer-pill">20 normalize_year</div>
+            <div class="footer-pill">15 normalize_ticker</div>
+        </div>
+        <div class="footer-right-text">
+            🛠️ Makefile targets: load, ratios, test, report, dashboard, api, clean
+        </div>
+    </div>
+    <div class="footer-desc-bar">
+        📌 DQ-01 to DQ-16 &middot; including net cash, tax rate, dividend cap, URL, EPS sign, BSE balance, coverage
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+company_id,sector,original_roce,calculated_roce,year,roce_difference,is_anomaly,adjustment_notes
+AXISBANK,Finance/Banking,7.06,2.52,2013-03,4.539999999999999,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,2.59,2014-03,4.47,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,2.46,2015-03,4.6,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,2.54,2016-03,4.52,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,4.08,2017-03,2.9799999999999995,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,4.28,2018-03,2.7799999999999994,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,3.48,2019-03,3.5799999999999996,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,3.97,2020-03,3.0899999999999994,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,3.33,2021-03,3.7299999999999995,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,2.63,2022-03,4.43,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,2.27,2023-03,4.789999999999999,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,2.61,2024-03,4.449999999999999,False,Match: Deviation is within acceptable limits.
+AXISBANK,Finance/Banking,7.06,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+BAJAJFINSV,Finance/Banking,21.14,18.91,2013-03,2.2300000000000004,False,Match: Deviation is within acceptable limits.
+BAJAJFINSV,Finance/Banking,21.14,15.58,2014-03,5.5600000000000005,True,Anomaly: Calculated ROCE (15.58%) deviates from source (21.14%) by 5.56% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,14.73,2015-03,6.41,True,Anomaly: Calculated ROCE (14.73%) deviates from source (21.14%) by 6.41% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,13.57,2016-03,7.57,True,Anomaly: Calculated ROCE (13.57%) deviates from source (21.14%) by 7.57% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,13.52,2017-03,7.620000000000001,True,Anomaly: Calculated ROCE (13.52%) deviates from source (21.14%) by 7.62% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,12.52,2018-03,8.620000000000001,True,Anomaly: Calculated ROCE (12.52%) deviates from source (21.14%) by 8.62% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,12.18,2019-03,8.96,True,Anomaly: Calculated ROCE (12.18%) deviates from source (21.14%) by 8.96% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,11.52,2020-03,9.620000000000001,True,Anomaly: Calculated ROCE (11.52%) deviates from source (21.14%) by 9.62% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,11.96,2021-03,9.18,True,Anomaly: Calculated ROCE (11.96%) deviates from source (21.14%) by 9.18% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,10.65,2022-03,10.49,True,Anomaly: Calculated ROCE (10.65%) deviates from source (21.14%) by 10.49% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,11.55,2023-03,9.59,True,Anomaly: Calculated ROCE (11.55%) deviates from source (21.14%) by 9.59% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,11.71,2024-03,9.43,True,Anomaly: Calculated ROCE (11.71%) deviates from source (21.14%) by 9.43% sector adjustment applied
+BAJAJFINSV,Finance/Banking,21.14,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+BAJFINANCE,Finance/Banking,11.9,5.57,2015-03,6.33,True,Anomaly: Calculated ROCE (5.57%) deviates from source (11.9%) by 6.33% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,5.3,2016-03,6.6000000000000005,True,Anomaly: Calculated ROCE (5.3%) deviates from source (11.9%) by 6.6% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,5.52,2017-03,6.380000000000001,True,Anomaly: Calculated ROCE (5.52%) deviates from source (11.9%) by 6.38% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,4.99,2018-03,6.91,True,Anomaly: Calculated ROCE (4.99%) deviates from source (11.9%) by 6.91% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,4.5,2019-03,7.4,True,Anomaly: Calculated ROCE (4.5%) deviates from source (11.9%) by 7.4% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,5.65,2020-03,6.25,True,Anomaly: Calculated ROCE (5.65%) deviates from source (11.9%) by 6.25% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,6.43,2021-03,5.470000000000001,True,Anomaly: Calculated ROCE (6.43%) deviates from source (11.9%) by 5.47% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,5.69,2022-03,6.21,True,Anomaly: Calculated ROCE (5.69%) deviates from source (11.9%) by 6.21% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,4.68,2023-03,7.220000000000001,True,Anomaly: Calculated ROCE (4.68%) deviates from source (11.9%) by 7.22% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,4.35,2024-03,7.550000000000001,True,Anomaly: Calculated ROCE (4.35%) deviates from source (11.9%) by 7.55% sector adjustment applied
+BAJFINANCE,Finance/Banking,11.9,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,2.02,2013-03,4.3100000000000005,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,1.84,2014-03,4.49,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,1.9,2015-03,4.43,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,3.83,2016-03,2.5,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,2.78,2017-03,3.5500000000000003,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,3.63,2018-03,2.7,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,3.27,2019-03,3.06,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,3.54,2020-03,2.79,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,3.31,2021-03,3.02,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,2.94,2022-03,3.39,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,2.64,2023-03,3.69,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,2.82,2024-03,3.5100000000000002,False,Match: Deviation is within acceptable limits.
+BANKBARODA,Finance/Banking,6.33,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+CHOLAFIN,Finance/Banking,10.4,4.0,2013-03,6.4,True,Anomaly: Calculated ROCE (4.0%) deviates from source (10.4%) by 6.4% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,4.58,2014-03,5.82,True,Anomaly: Calculated ROCE (4.58%) deviates from source (10.4%) by 5.82% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,4.69,2015-03,5.71,True,Anomaly: Calculated ROCE (4.69%) deviates from source (10.4%) by 5.71% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,4.83,2016-03,5.57,True,Anomaly: Calculated ROCE (4.83%) deviates from source (10.4%) by 5.57% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,4.66,2017-03,5.74,True,Anomaly: Calculated ROCE (4.66%) deviates from source (10.4%) by 5.74% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,3.34,2018-03,7.0600000000000005,True,Anomaly: Calculated ROCE (3.34%) deviates from source (10.4%) by 7.06% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,2.87,2019-03,7.53,True,Anomaly: Calculated ROCE (2.87%) deviates from source (10.4%) by 7.53% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,3.83,2020-03,6.57,True,Anomaly: Calculated ROCE (3.83%) deviates from source (10.4%) by 6.57% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,3.97,2021-03,6.43,True,Anomaly: Calculated ROCE (3.97%) deviates from source (10.4%) by 6.43% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,3.61,2022-03,6.790000000000001,True,Anomaly: Calculated ROCE (3.61%) deviates from source (10.4%) by 6.79% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,3.24,2023-03,7.16,True,Anomaly: Calculated ROCE (3.24%) deviates from source (10.4%) by 7.16% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,3.5,2024-03,6.9,True,Anomaly: Calculated ROCE (3.5%) deviates from source (10.4%) by 6.9% sector adjustment applied
+CHOLAFIN,Finance/Banking,10.4,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,3.39,2013-03,4.279999999999999,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.93,2014-03,4.74,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.82,2015-03,4.85,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.77,2016-03,4.9,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.86,2017-03,4.8100000000000005,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.8,2018-03,4.87,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.82,2019-03,4.85,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,3.01,2020-03,4.66,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,3.05,2021-03,4.62,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.78,2022-03,4.890000000000001,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,2.6,2023-03,5.07,True,Anomaly: Calculated ROCE (2.6%) deviates from source (7.67%) by 5.07% sector adjustment applied
+HDFCBANK,Finance/Banking,7.67,4.89,2024-03,2.7800000000000002,False,Match: Deviation is within acceptable limits.
+HDFCBANK,Finance/Banking,7.67,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,5.69,2013-03,1.9099999999999993,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,5.3,2014-03,2.3,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,5.68,2015-03,1.92,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,6.83,2016-03,0.7699999999999996,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,7.93,2017-03,0.33000000000000007,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,7.86,2018-03,0.2600000000000007,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,8.33,2019-03,0.7300000000000004,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,7.5,2020-03,0.09999999999999964,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,7.24,2021-03,0.35999999999999943,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,5.63,2022-03,1.9699999999999998,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,5.44,2023-03,2.1599999999999993,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,5.22,2024-03,2.38,False,Match: Deviation is within acceptable limits.
+ICICIBANK,Finance/Banking,7.6,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+JIOFIN,Finance/Banking,2.16,0.03,2023-03,2.1300000000000003,False,Match: Deviation is within acceptable limits.
+JIOFIN,Finance/Banking,2.16,1.12,2024-03,1.04,False,Match: Deviation is within acceptable limits.
+JIOFIN,Finance/Banking,2.16,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,6.55,2013-03,1.3100000000000005,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,6.72,2014-03,1.1400000000000006,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,7.69,2015-03,0.16999999999999993,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,5.42,2016-03,2.4400000000000004,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,6.09,2017-03,1.7700000000000005,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,5.6,2018-03,2.2600000000000007,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,5.65,2019-03,2.21,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,5.74,2020-03,2.12,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,7.25,2021-03,0.6100000000000003,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,6.64,2022-03,1.2200000000000006,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,6.31,2023-03,1.5500000000000007,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,7.23,2024-03,0.6299999999999999,False,Match: Deviation is within acceptable limits.
+KOTAKBANK,Finance/Banking,7.86,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+SBILIFE,Finance/Banking,13.2,15.61,2013-03,2.41,False,Match: Deviation is within acceptable limits.
+SBILIFE,Finance/Banking,13.2,15.23,2014-03,2.030000000000001,False,Match: Deviation is within acceptable limits.
+SBILIFE,Finance/Banking,13.2,19.58,2015-03,6.379999999999999,True,Anomaly: Calculated ROCE (19.58%) deviates from source (13.2%) by 6.38% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,19.44,2016-03,6.240000000000002,True,Anomaly: Calculated ROCE (19.44%) deviates from source (13.2%) by 6.24% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,19.24,2017-03,6.039999999999999,True,Anomaly: Calculated ROCE (19.24%) deviates from source (13.2%) by 6.04% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,20.4,2018-03,7.199999999999999,True,Anomaly: Calculated ROCE (20.4%) deviates from source (13.2%) by 7.2% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,19.46,2019-03,6.260000000000002,True,Anomaly: Calculated ROCE (19.46%) deviates from source (13.2%) by 6.26% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,15.45,2020-03,2.25,False,Match: Deviation is within acceptable limits.
+SBILIFE,Finance/Banking,13.2,8.38,2021-03,4.8199999999999985,False,Match: Deviation is within acceptable limits.
+SBILIFE,Finance/Banking,13.2,6.28,2022-03,6.919999999999999,True,Anomaly: Calculated ROCE (6.28%) deviates from source (13.2%) by 6.92% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,0.94,2023-03,12.26,True,Anomaly: Calculated ROCE (0.94%) deviates from source (13.2%) by 12.26% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,1.65,2024-03,11.549999999999999,True,Anomaly: Calculated ROCE (1.65%) deviates from source (13.2%) by 11.55% sector adjustment applied
+SBILIFE,Finance/Banking,13.2,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2013-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2014-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2015-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2016-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2017-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2018-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2019-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2020-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2021-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2022-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2023-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,2024-03,,False,Match: Deviation is within acceptable limits.
+SBIN,Finance/Banking,6.16,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.
+SHRIRAMFIN,Finance/Banking,11.3,5.35,2013-03,5.950000000000001,True,Anomaly: Calculated ROCE (5.35%) deviates from source (11.3%) by 5.95% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,4.24,2014-03,7.0600000000000005,True,Anomaly: Calculated ROCE (4.24%) deviates from source (11.3%) by 7.06% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,3.02,2015-03,8.280000000000001,True,Anomaly: Calculated ROCE (3.02%) deviates from source (11.3%) by 8.28% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,3.04,2016-03,8.260000000000002,True,Anomaly: Calculated ROCE (3.04%) deviates from source (11.3%) by 8.26% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,3.06,2017-03,8.24,True,Anomaly: Calculated ROCE (3.06%) deviates from source (11.3%) by 8.24% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,3.97,2018-03,7.33,True,Anomaly: Calculated ROCE (3.97%) deviates from source (11.3%) by 7.33% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,3.66,2019-03,7.640000000000001,True,Anomaly: Calculated ROCE (3.66%) deviates from source (11.3%) by 7.64% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,3.16,2020-03,8.14,True,Anomaly: Calculated ROCE (3.16%) deviates from source (11.3%) by 8.14% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,2.65,2021-03,8.65,True,Anomaly: Calculated ROCE (2.65%) deviates from source (11.3%) by 8.65% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,2.6,2022-03,8.700000000000001,True,Anomaly: Calculated ROCE (2.6%) deviates from source (11.3%) by 8.7% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,4.24,2023-03,7.0600000000000005,True,Anomaly: Calculated ROCE (4.24%) deviates from source (11.3%) by 7.06% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,4.3,2024-03,7.000000000000001,True,Anomaly: Calculated ROCE (4.3%) deviates from source (11.3%) by 7.0% sector adjustment applied
+SHRIRAMFIN,Finance/Banking,11.3,,PARSE_ERROR,,False,Match: Deviation is within acceptable limits.

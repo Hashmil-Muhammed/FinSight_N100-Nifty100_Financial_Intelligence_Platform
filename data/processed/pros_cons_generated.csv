@@ -1,0 +1,140 @@
+company_id,type,rule_triggered,text,confidence_pct,sentiment_score
+ABB,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+ADANIENSOL,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 25.21%.,90,0.7096
+ADANIENSOL,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+ADANIENT,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+ADANIGREEN,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 28.07%.,90,0.7096
+ADANIGREEN,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+ADANIPORTS,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+ADANIPOWER,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 25.4%.,90,0.7096
+ADANIPOWER,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+AMBUJACEM,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+ATGL,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 16.68%.,90,0.7096
+AXISBANK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 21.44%.,90,0.7096
+AXISBANK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BAJAJFINSV,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 22.67%.,90,0.7096
+BAJAJFINSV,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BAJAJHLDNG,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 52.99%.,90,0.7096
+BAJAJHLDNG,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BAJFINANCE,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 25.32%.,90,0.7096
+BAJFINANCE,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BANKBARODA,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 19.15%.,90,0.7096
+BANKBARODA,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BEL,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BHARTIARTL,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+BOSCHLTD,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+CANBK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 19.13%.,90,0.7096
+CANBK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+CHOLAFIN,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 30.4%.,90,0.7096
+CHOLAFIN,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+CIPLA,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+COALINDIA,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+DABUR,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+DIVISLAB,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+DIVISLAB,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+DLF,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+DMART,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 22.69%.,90,0.7096
+DMART,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+DRREDDY,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+EICHERMOT,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 18.4%.,90,0.7096
+EICHERMOT,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+GAIL,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+GODREJCP,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+GRASIM,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+HAL,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+HDFCBANK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 34.27%.,90,0.7096
+HDFCBANK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+HEROMOTOCO,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+HINDALCO,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+HINDALCO,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+ICICIBANK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 23.69%.,90,0.7096
+ICICIBANK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+ICICIGI,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+INDIGO,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 43.41%.,90,0.7096
+INDUSINDBK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 16.71%.,90,0.7096
+INDUSINDBK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+IOC,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+IRCTC,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 33.34%.,90,0.7096
+IRCTC,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+JINDALSTEL,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+JINDALSTEL,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+JSWSTEEL,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+KOTAKBANK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 23.82%.,90,0.7096
+KOTAKBANK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+LICI,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+LODHA,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+LT,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 15.13%.,90,0.7096
+LT,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+M&M,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 17.4%.,90,0.7096
+M&M,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+MARUTI,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 18.02%.,90,0.7096
+MARUTI,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+MOTHERSON,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 19.7%.,90,0.7096
+MOTHERSON,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+NAUKRI,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 18.77%.,90,0.7096
+NAUKRI,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+NHPC,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+NHPC,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+ONGC,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+PIDILITIND,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+PNB,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 15.06%.,90,0.7096
+PNB,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+POWERGRID,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+POWERGRID,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+SBILIFE,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 16.16%.,90,0.7096
+SBILIFE,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+SBIN,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 17.44%.,90,0.7096
+SBIN,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+SHRIRAMFIN,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 27.45%.,90,0.7096
+SHRIRAMFIN,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+SIEMENS,Pro,D/E < 0.1,"Virtually debt-free business, significantly reducing financial and interest rate risks.",98,0.2263
+SIEMENS,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 19.0%.,90,0.7096
+SIEMENS,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+SIEMENS,Pro,FCF Positive,Consistent positive Free Cash Flow generation.,85,0.7845
+SIEMENS,Pro,ICR > 5,Strong Interest Coverage Ratio; the company can comfortably service its debt obligations.,88,0.765
+SIEMENS,Pro,CapEx < 5%,Asset-light business model requiring low capital expenditure.,82,-0.2732
+SUNPHARMA,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+TATAMOTORS,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 16.48%.,90,0.7096
+TATAPOWER,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+TATASTEEL,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+TATASTEEL,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+TECHM,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+TITAN,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 23.66%.,90,0.7096
+TORNTPHARM,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+TRENT,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 49.49%.,90,0.7096
+TRENT,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+TVSMOTOR,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 20.76%.,90,0.7096
+TVSMOTOR,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+ULTRACEMCO,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+UNIONBANK,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 16.2%.,90,0.7096
+UNIONBANK,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+UNITDSPR,Pro,D/E < 0.1,"Virtually debt-free business, significantly reducing financial and interest rate risks.",98,0.2263
+UNITDSPR,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+UNITDSPR,Pro,ROCE > 20%,"Excellent Return on Capital Employed, showing effective capital allocation.",94,0.7783
+UNITDSPR,Pro,ICR > 5,Strong Interest Coverage Ratio; the company can comfortably service its debt obligations.,88,0.765
+VBL,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 29.11%.,90,0.7096
+VBL,Pro,PAT CAGR > 15%,Robust profitability growth demonstrating strong earnings momentum over 3 years.,90,0.8555
+VEDL,Pro,ROE > 20%,"High Return on Equity of 42.26%, indicating highly efficient use of shareholder capital.",95,0.4754
+VEDL,Pro,OPM > 20%,High Operating Profit Margins demonstrating strong pricing power in the market.,92,0.7351
+VEDL,Pro,ROCE > 20%,"Excellent Return on Capital Employed, showing effective capital allocation.",94,0.7783
+VEDL,Con,D/E > 2,High financial leverage which increases susceptibility to interest rate hikes.,95,0.4588
+VEDL,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+VEDL,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023
+VEDL,Con,High Debt + Low ICR,Dangerous combination of high debt and low interest coverage.,99,-0.5719
+WIPRO,Pro,OPM > 20%,High Operating Profit Margins demonstrating strong pricing power in the market.,92,0.7351
+WIPRO,Pro,ICR > 5,Strong Interest Coverage Ratio; the company can comfortably service its debt obligations.,88,0.765
+WIPRO,Con,Rev CAGR < 5%,Sluggish top-line revenue growth over the past 3 years.,85,-0.0258
+ZOMATO,Pro,D/E < 0.1,"Virtually debt-free business, significantly reducing financial and interest rate risks.",98,0.2263
+ZOMATO,Pro,Rev CAGR > 15%,Strong top-line growth with a 3-year Revenue CAGR of 62.45%.,90,0.7096
+ZOMATO,Pro,ICR > 5,Strong Interest Coverage Ratio; the company can comfortably service its debt obligations.,88,0.765
+ZOMATO,Con,ROE < 10%,"Subpar Return on Equity of 3.11%, indicating poor returns for shareholders.",90,-0.4767
+ZOMATO,Con,OPM < 10%,"Low Operating Margins, vulnerable to input cost inflation.",85,-0.4588
+ZOMATO,Con,ROCE < 10%,"Poor Return on Capital Employed, indicating inefficient capital use.",92,-0.4767
+ZOMATO,Con,NPM < 5%,Razor-thin Net Profit Margins leaving little room for operational errors.,88,0.128
+ZYDUSLIFE,Pro,ROE > 20%,"High Return on Equity of 20.34%, indicating highly efficient use of shareholder capital.",95,0.4754
+ZYDUSLIFE,Pro,D/E < 0.1,"Virtually debt-free business, significantly reducing financial and interest rate risks.",98,0.2263
+ZYDUSLIFE,Pro,OPM > 20%,High Operating Profit Margins demonstrating strong pricing power in the market.,92,0.7351
+ZYDUSLIFE,Pro,ROCE > 20%,"Excellent Return on Capital Employed, showing effective capital allocation.",94,0.7783
+ZYDUSLIFE,Pro,ICR > 5,Strong Interest Coverage Ratio; the company can comfortably service its debt obligations.,88,0.765
+ZYDUSLIFE,Pro,NPM > 15%,"Healthy Net Profit Margins, retaining a solid portion of total revenues.",85,0.7351
+ZYDUSLIFE,Con,PAT CAGR < 0,Negative profit growth (degrowth) over a 3-year period.,98,0.2023

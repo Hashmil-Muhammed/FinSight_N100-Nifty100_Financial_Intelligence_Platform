@@ -1,0 +1,31 @@
+company_id,metric_type,period_years,parsed_value,db_column,db_value,absolute_diff,status_flag
+HDFCBANK,Compounded Sales Growth,10,21.0,revenue_cagr_10y,20.57,0.43,✅ MATCH
+HDFCBANK,Compounded Profit Growth,10,22.0,pat_cagr_10y,21.03,0.97,✅ MATCH
+SBILIFE,Compounded Sales Growth,5,24.0,revenue_cagr_5y,24.32,0.32,✅ MATCH
+SBILIFE,Compounded Profit Growth,5,6.0,pat_cagr_5y,11.14,5.14,⚠️ DIVERGENCE > 5%
+SBILIFE,Compounded Sales Growth,3,17.0,revenue_cagr_3y,16.16,0.84,✅ MATCH
+SBILIFE,Compounded Profit Growth,3,9.0,pat_cagr_3y,16.98,7.98,⚠️ DIVERGENCE > 5%
+TCS,Compounded Sales Growth,10,11.0,revenue_cagr_10y,10.29,0.71,✅ MATCH
+TCS,Compounded Profit Growth,10,9.0,pat_cagr_10y,9.34,0.34,✅ MATCH
+TCS,Compounded Sales Growth,5,10.0,revenue_cagr_5y,9.94,0.06,✅ MATCH
+TCS,Compounded Profit Growth,5,8.0,pat_cagr_5y,8.6,0.6,✅ MATCH
+TCS,Compounded Sales Growth,3,14.0,revenue_cagr_3y,9.55,4.45,✅ MATCH
+TCS,Compounded Profit Growth,3,12.0,pat_cagr_3y,8.42,3.58,✅ MATCH
+WIPRO,Compounded Sales Growth,10,8.0,revenue_cagr_10y,6.58,1.42,✅ MATCH
+WIPRO,Compounded Profit Growth,10,3.0,pat_cagr_10y,3.66,0.66,✅ MATCH
+WIPRO,Compounded Sales Growth,5,9.0,revenue_cagr_5y,7.75,1.25,✅ MATCH
+WIPRO,Compounded Profit Growth,5,4.0,pat_cagr_5y,5.03,1.03,✅ MATCH
+WIPRO,Compounded Sales Growth,3,13.0,revenue_cagr_3y,3.84,9.16,⚠️ DIVERGENCE > 5%
+WIPRO,Compounded Profit Growth,3,0.0,pat_cagr_3y,0.66,0.66,✅ MATCH
+HDFCBANK,Compounded Sales Growth,5,22.0,revenue_cagr_5y,21.91,0.09,✅ MATCH
+HDFCBANK,Compounded Profit Growth,5,23.0,pat_cagr_5y,21.46,1.54,✅ MATCH
+HDFCBANK,Compounded Sales Growth,3,30.0,revenue_cagr_3y,34.27,4.27,✅ MATCH
+HDFCBANK,Compounded Profit Growth,3,26.0,pat_cagr_3y,23.67,2.33,✅ MATCH
+INFY,Compounded Sales Growth,10,12.0,revenue_cagr_10y,11.61,0.39,✅ MATCH
+INFY,Compounded Profit Growth,10,9.0,pat_cagr_10y,8.39,0.61,✅ MATCH
+INFY,Compounded Sales Growth,5,13.0,revenue_cagr_5y,12.0,1.0,✅ MATCH
+INFY,Compounded Profit Growth,5,11.0,pat_cagr_5y,10.72,0.28,✅ MATCH
+INFY,Compounded Sales Growth,3,5.0,revenue_cagr_3y,9.56,4.56,✅ MATCH
+INFY,Compounded Profit Growth,3,10.0,pat_cagr_3y,7.73,2.27,✅ MATCH
+SBILIFE,Compounded Sales Growth,10,23.0,revenue_cagr_10y,18.71,4.29,✅ MATCH
+SBILIFE,Compounded Profit Growth,10,9.0,pat_cagr_10y,11.46,2.46,✅ MATCH

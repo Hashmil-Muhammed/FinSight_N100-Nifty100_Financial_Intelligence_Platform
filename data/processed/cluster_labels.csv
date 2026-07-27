@@ -1,0 +1,101 @@
+company_id,cluster_id,cluster_name,distance_from_centroid
+ABB,0,Distressed,0.3005
+ADANIENT,0,Distressed,0.3096
+AMBUJACEM,0,Distressed,0.5784
+ADANIPORTS,0,Distressed,0.0517
+APOLLOHOSP,0,Distressed,0.1231
+BAJAJ-AUTO,0,Distressed,0.3133
+ATGL,0,Distressed,0.5765
+ASIANPAINT,0,Distressed,0.4031
+BANKBARODA,0,Distressed,0.8058
+CANBK,0,Distressed,0.8039
+BRITANNIA,0,Distressed,0.3402
+BPCL,0,Distressed,0.1682
+BOSCHLTD,0,Distressed,0.2663
+BHEL,0,Distressed,0.3458
+BHARTIARTL,0,Distressed,0.0517
+BEL,0,Distressed,0.1419
+DLF,0,Distressed,0.3273
+COALINDIA,0,Distressed,0.1837
+DABUR,0,Distressed,0.5524
+DIVISLAB,0,Distressed,1.0966
+EICHERMOT,0,Distressed,0.7361
+DRREDDY,0,Distressed,0.2515
+CIPLA,0,Distressed,0.2866
+INDUSINDBK,0,Distressed,0.5792
+HEROMOTOCO,0,Distressed,0.0404
+HDFCLIFE,0,Distressed,0.3744
+HCLTECH,0,Distressed,0.0355
+HAVELLS,0,Distressed,0.3327
+HAL,0,Distressed,0.2194
+GRASIM,0,Distressed,0.2111
+GODREJCP,0,Distressed,0.5255
+GAIL,0,Distressed,0.293
+M&M,0,Distressed,0.6433
+LICI,0,Distressed,0.2903
+LODHA,0,Distressed,0.3013
+ITC,0,Distressed,0.2894
+JIOFIN,0,Distressed,0.1419
+JINDALSTEL,0,Distressed,1.0455
+JSWENERGY,0,Distressed,0.1275
+JSWSTEEL,0,Distressed,0.4958
+MARUTI,0,Distressed,0.7008
+HINDALCO,0,Distressed,0.5376
+HINDUNILVR,0,Distressed,0.4087
+ICICIGI,0,Distressed,0.2626
+ICICIPRULI,0,Distressed,0.3393
+IRFC,0,Distressed,0.0698
+IOC,0,Distressed,0.1501
+INFY,0,Distressed,0.0933
+LT,0,Distressed,0.4327
+LTIM,0,Distressed,0.1855
+SBIN,0,Distressed,0.647
+SBILIFE,0,Distressed,0.5282
+RELIANCE,0,Distressed,0.0364
+RECLTD,0,Distressed,0.1028
+POWERGRID,0,Distressed,0.674
+PNB,0,Distressed,0.4262
+PIDILITIND,0,Distressed,0.1294
+PFC,0,Distressed,0.1628
+ONGC,0,Distressed,0.0405
+NTPC,0,Distressed,0.1356
+NHPC,0,Distressed,0.7947
+NESTLEIND,0,Distressed,0.4745
+NAUKRI,0,Distressed,0.7705
+MOTHERSON,0,Distressed,0.8569
+TORNTPHARM,0,Distressed,0.0627
+SUNPHARMA,0,Distressed,0.1267
+TATACONSUM,0,Distressed,0.1019
+TATAMOTORS,0,Distressed,0.5579
+TATAPOWER,0,Distressed,0.3309
+TATASTEEL,0,Distressed,1.2769
+TCS,0,Distressed,0.0941
+TECHM,0,Distressed,0.4624
+UNIONBANK,0,Distressed,0.5319
+UNITDSPR,0,Distressed,0.6229
+ULTRACEMCO,0,Distressed,0.0391
+WIPRO,0,Distressed,1.5154
+SHREECEM,0,Distressed,0.083
+SIEMENS,0,Distressed,2.5566
+VEDL,1,Value Cyclicals,0.0
+ZOMATO,2,High-Quality Growth,0.0
+ZYDUSLIFE,3,Emerging Growth,0.0
+IRCTC,4,Defensive Dividend,0.3438
+KOTAKBANK,4,Defensive Dividend,0.5412
+INDIGO,4,Defensive Dividend,1.2799
+HDFCBANK,4,Defensive Dividend,0.4303
+ADANIENSOL,4,Defensive Dividend,0.412
+ICICIBANK,4,Defensive Dividend,0.5533
+ADANIPOWER,4,Defensive Dividend,0.3943
+BAJFINANCE,4,Defensive Dividend,0.4017
+BAJAJHLDNG,4,Defensive Dividend,2.1705
+BAJAJFINSV,4,Defensive Dividend,0.6481
+AXISBANK,4,Defensive Dividend,0.7624
+ADANIGREEN,4,Defensive Dividend,0.1461
+DMART,4,Defensive Dividend,0.6462
+CHOLAFIN,4,Defensive Dividend,0.0705
+SHRIRAMFIN,4,Defensive Dividend,0.2037
+VBL,4,Defensive Dividend,0.0494
+TITAN,4,Defensive Dividend,0.5561
+TRENT,4,Defensive Dividend,1.8451
+TVSMOTOR,4,Defensive Dividend,0.8256

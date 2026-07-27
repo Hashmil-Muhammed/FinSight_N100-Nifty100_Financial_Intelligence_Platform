@@ -1,0 +1,23 @@
+# SPRINT 2 - ANALYTICS ENGINE EDGE CASE LOG
+# Date: June 2026
+# Module: Financial KPI Calculations
+
+[LEVERAGE] DEBT-TO-EQUITY (D/E)
+- Action: Applied Bank Carve-out.
+- Reason: Financial institutions (Banks/NBFCs) use deposits (debt) as raw material. Standard D/E logic invalidates their profile.
+- Result: Returned 'None' for identifiers matching '%bank%', '%fin%', '%sbi%'.
+
+[LEVERAGE] INTEREST COVERAGE RATIO (ICR)
+- Action: Applied Debt-free substitution.
+- Reason: Companies with zero debt trigger ZeroDivisionError.
+- Result: Defaulted to '999.0' for all zero-interest rows to indicate extreme high safety.
+
+[CAGR] COMPOUND ANNUAL GROWTH RATE
+- Action: Implemented Turnaround Flag / Mathematical filter.
+- Reason: Fractional power on negative bases throws 'RuntimeWarning' (Complex numbers).
+- Result: Suppressed calculations for negative start/end values. Set 'Turnaround = True' if start_val < 0 and end_val > 0.
+
+[PROFITABILITY] RETURN ON CAPITAL EMPLOYED (ROCE)
+- Action: Logged sector deviations.
+- Reason: Computed ROCE for financial sector aggressively deviates from source Excel.
+- Result: Logged 54 anomalies to 'reports/sector_roce_notes.csv'. Acceptable analytical variance.

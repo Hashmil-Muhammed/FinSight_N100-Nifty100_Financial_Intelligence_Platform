@@ -1,0 +1,30 @@
+# 6 Preset Screener Configurations for Nifty 100 Universe
+# Based on 'financial_ratios' table
+
+presets:
+  Quality:
+    ROE: "> 15"
+    ROCE: "> 15"
+    D_E: "< 1"
+  
+  Value:
+    # We will use other metrics available in financial_ratios for Value
+    # Since PE/PB are in another table, we'll use quality of cash flow
+    CFO_Quality_Score: "> 0.8"
+    FCF_Conversion: "> 50"
+  
+  Growth:
+    Revenue_CAGR_3Y: "> 10"
+    PAT_CAGR_3Y: "> 10"
+  
+  Dividend:
+    # Alternative for Dividend using available ratios (e.g. Free Cash Flow)
+    FCF: "> 100"
+    Capital_Allocation_Pattern: "> 0" # Assuming positive pattern indicates dividend/buybacks
+  
+  Momentum:
+    # Using 3Y CAGR as a proxy for long-term momentum since 1yr return is missing here
+    EPS_CAGR_3Y: "> 15"
+  
+  Debt_Free:
+    D_E: "< 0.1"
